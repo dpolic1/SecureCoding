@@ -6,11 +6,12 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserRequest {
+public class UserRequest implements Serializable {
 
     @NotBlank(message = "Username is mandatory")
     private String username;

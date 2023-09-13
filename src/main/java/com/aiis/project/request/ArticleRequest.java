@@ -7,11 +7,12 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArticleRequest {
+public class ArticleRequest implements Serializable {
 
     @NotBlank(message = "Article code is mandatory")
     private String articleCode;
